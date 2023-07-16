@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<style>
+	/* 新闻内容样式 */
+	.news-content {
+		/* 设置字体 */
+		font-family: Arial, sans-serif;
+		/* 设置背景色 */
+		background-color: #f2f2f2;
+		;
+		/* 设置阴影 */
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		/* 设置外边距 */
+		margin: 20px;
+		/* 设置内边距 */
+		padding: 20px;
+		/* 设置圆角 */
+		border-radius: 5px;
+		display: flex;
+		align-items: center;
+	}
+
+	.news-content div p {
+		/* 缩进2字符 */
+		/* text-indent: 2ch; */
+		text-align: justify;
+		font-size: 20px;
+		/* 设置字体大小 */
+		margin: 10px 0;
+		/* 设置外边距 */
+		line-height: 2;
+		/* 设置行高 */
+	}
+
+	ul li img {
+		display: block;
+		position: relative;
+		/* 将图片设置为块级元素 */
+		width: 27vw;
+		/* 图片宽度为100% */
+		height: 18vw;
+		/* 图片高度自适应 */
+		margin-left: 2.5%;
+	}
+</style>
+
+<body>
+	<nav>
+		<div class="nav-container">
+			<div class="logo">
+				<!-- <a href="#">LOGO</a> -->
+			</div>
+			<div class="menu-toggle" onclick="menuCtr()">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<ul class="menu">
+				<li class="menu-li"><a href="#">Home</a></li>
+				<li class="menu-li project"><a href="#">Project</a>
+					<ul class="sub-menu">
+						<li><a href="chatgpt_with_XAI.html">chat-gpt with XAI</a></li>
+						<li><a href="chatgpt_with_fairAI.html">chat-gpt with fairAI</a></li>
+					</ul>
+				</li>
+				<li class="menu-li"><a href="#">Github</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<header>
+		<div class="banner">
+			<!-- <h1>欢迎来到我们的网站</h1> -->
+			<!-- <p>这里是一个简短的介绍</p> -->
+		</div>
+	</header>
+
+	<main>
+		<!-- <div class="image-list">
+			<div class="image-row">
+				<div class="image-item">
+					<img src="./images/count_of_ds_pred_by_year.png" alt="your image 1">
+				</div>
+			</div>
+		</div> -->
+		<ul class="link-list">
+			<li>
+				<a href="chatgpt_with_XAI.html" style="font-size: 5vh;text-decoration:none">chat-gpt with XAI</a>
+				<div class="news-content">
+					<div style="width:65%; padding-right: 2.5%; border-right: 1px solid black;">
+						<p>
+							Explainable Artificial Intelligence (XAI) is a field that focuses on the interpretability
+							and
+							comprehensibility of
+							machine learning models. It aims to address the issue of "black box" models by providing
+							human-understandable
+							explanations and visualization tools that allow individuals to gain insights into the
+							model's
+							predictions and
+							decision-making processes. The goal of XAI is to open up the inner workings of the model,
+							enabling
+							users to understand
+							how it utilizes input data to make predictions and decisions, rather than solely accepting
+							its
+							outcomes. Through
+							interpretability, individuals can verify the accuracy, fairness, and reliability of the
+							model
+							and
+							identify potential
+							biases and unfairness. The importance of XAI lies in enhancing trust and acceptability in
+							artificial
+							intelligence
+							systems, facilitating effective communication and collaboration with users, and ensuring
+							that
+							the
+							decision-making
+							processes of AI systems are transparent, auditable, and understandable. With XAI, we can
+							build
+							more
+							trustworthy and
+							auditable AI systems, providing individuals with a means to comprehend and explain the
+							workings
+							of
+							the model for better
+							application and evaluation of its suitability in practical use cases.
+						</p>
+					</div>
+
+					<img src="./images/wordcloud1.png" alt="wordcloud">
+
+				</div>
+			</li>
+			<li>
+				<a href="chatgpt_with_fairAI.html" style="font-size: 5vh;text-decoration:none">chat-gpt with fairAI</a>
+				<div class="news-content">
+					<div style="width:65%; padding-right: 2.5%; border-right: 1px solid black;">
+						<p>
+							Fair AI, also known as Fairness in Artificial Intelligence, is an important area of research
+							and practice that focuses
+							on mitigating biases and promoting equitable outcomes in machine learning and AI systems. It
+							recognizes that AI models
+							and algorithms can inadvertently perpetuate and amplify existing social, cultural, and
+							historical biases present in the
+							data used for training. Fair AI aims to address these biases and ensure that AI systems
+							treat individuals fairly and
+							without discrimination based on sensitive attributes such as race, gender, age, or
+							socioeconomic status.
+						</p>
+						<p>
+							Fair AI involves developing techniques, methodologies, and evaluation metrics to measure and
+							quantify fairness in AI
+							systems. It seeks to identify and rectify biases that may arise from data collection,
+							preprocessing, feature selection,
+							or algorithmic decision-making. Fair AI also explores ways to incorporate fairness
+							considerations during the design,
+							development, and deployment phases of AI systems to minimize disparities and ensure
+							equitable outcomes across different
+							user groups.
+						</p>
+					</div>
+					<img src="./images/wordcloud2.jpg" alt="wordcloud">
+				</div>
+			</li>
+		</ul>
+	</main>
+
+	<footer>
+		<!-- 这里是页脚 -->
+	</footer>
+
+	<script src="./js/script.js"></script>
+</body>
+<script>
+	var project = document.querySelector(".project");
+	// 获取二级菜单
+	var subMenu = document.querySelector(".sub-menu");
+
+	// 添加鼠标移入事件监听器
+	project.addEventListener("mouseover", function () {
+		// 在鼠标移入时将二级菜单设置为可见
+		subMenu.style.display = "block";
+	});
+
+	// 添加鼠标移出事件监听器
+	project.addEventListener("mouseout", function () {
+		// 在鼠标移出后3秒将二级菜单设置为不可见
+		setTimeout(() => {
+			if (!subMenu.querySelectorAll('*')[0].matches(":hover")) {
+				subMenu.style.display = "none";
+			}
+		}, 3000);
+	});
+
+	project.addEventListener("touchend", function () {
+		location.href = "chatgpt_with_XAI.html"
+	});
+</script>
+
+</html>
